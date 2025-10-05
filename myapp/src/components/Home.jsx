@@ -4,6 +4,7 @@ import "../styles/Button.css"
 import Button from './Button'
 
 import About from './About'
+import Contact from './Contact'
 
 function Home() {
   return (
@@ -25,7 +26,7 @@ function Home() {
      </div>
 
      <About/>
-
+    <Contact/>
 
      
      </>

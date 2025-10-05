@@ -4,6 +4,7 @@
 }
 
 .about-grid {
+    padding: 30px 0;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     place-items: center;
@@ -12,7 +13,7 @@
 
 .about-grid-1, .about-grid-2 {
     /* border: 2px solid white; */
-    height: 280px;
+    height: auto;
     width: 80%;
 }
 
@@ -30,6 +31,7 @@
     font-size: 20px;
     padding: 10px;
 }
+
 
 @media (max-width: 800px) {
     .about-grid {
