@@ -1,0 +1,29 @@
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+}
+
+i {
+    color: rgb(252, 67, 67);
+}
+
+.copyright p {
+    text-align: center;
+}
+
+.footer-box-2 p a {
+    color: white;
+    text-decoration: none;
+}
+
+@media (max-width: 720px) {
+    .footer-grid {
+    grid-template-columns: 1fr;
+
+    .box-1 {
+        text-align: center;
+    }
+
+}
+}
