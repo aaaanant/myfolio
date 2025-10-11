@@ -4,6 +4,32 @@ import "../styles/Button.css"
 import Button from './Button'
 
 function Contact() {
+
+  const [result, setResult] = React.useState("");
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    setResult("Sending....");
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "47827b57-9300-4912-b646-a3ccfd8580da");
+
+    const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+
+    if (data.success) {
+      setResult("Form Submitted Successfully");
+      event.target.reset();
+    } else {
+      console.log("Error", data);
+      setResult(data.message);
+    }
+  };
+
   return (
     <>
     
@@ -25,12 +51,15 @@ function Contact() {
       <div className="contact-grid-2">
         <p>FILL THE FORM BELOW*</p>
       <div className='contact-form'>
-        <form>
+        <form onSubmit={onSubmit}>
+         <input type="hidden" name="access_key" value="47827b57-9300-4912-b646-a3ccfd8580da"></input>
           <input type='text' placeholder='Your full name' required /><br/>
           <input type="email" placeholder='Enter your mail' required/><br/>
           <textarea placeholder='Type your message' required></textarea><br/>
-           <Button text="Submit Now"/>
+           <Button type="submit" text="Submit Now"/>
+           
         </form>
+          <span>{result}</span>
         </div>
 
       </div>

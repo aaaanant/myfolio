@@ -4,6 +4,7 @@ import "../styles/Button.css"
 import Button from './Button'
 
 import About from './About'
+import Skills from './Skills'
 import Contact from './Contact'
 
 function Home() {
@@ -26,6 +27,7 @@ function Home() {
      </div>
 
      <About/>
+     <Skills/>
     <Contact/>
 
      
