@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    height: 10%;
+    width: 100%;
+    background-color: black;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-around;
+     z-index: 1000;
+}
+
+.brand {
+    padding: 10px;
+}
+
+.list-space{
+    width: 40%;
+}
+
+.list-space ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+.list-space li a{
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.menu {
+    display: none;
+}
+
+.close {
+    display: none;
+}
+
+@media (max-width: 1000px)
+{
+
+    .list-space{
+        display: none;
+    }
+    
+    .menu {
+        display: block;
+    }
+
+    .close {
+        display: none;
+    }
+
+}
